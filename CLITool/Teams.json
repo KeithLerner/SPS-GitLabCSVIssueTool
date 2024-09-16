@@ -1,0 +1,32 @@
+{
+  "ai": [
+      {
+          "alexis": "@alexis"
+      },
+      {
+          "shiva": "@shiva"
+      },
+      {
+          "shean": "@shean"
+      }
+  ],
+  "gameplay": [
+      {
+          "caleb": "@caleb"
+      },
+      {
+          "joseph": "@joseph"
+      },
+      {
+          "arsenii": "@arsenii"
+      }
+  ],
+  "systems": [
+      {
+          "paul": "@paul"
+      },
+      {
+          "declan": "@declan"
+      }
+  ]
+}
