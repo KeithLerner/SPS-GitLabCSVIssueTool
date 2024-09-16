@@ -110,7 +110,7 @@ class Program
             }
         }
 
-        // Create task to add to master list
+        // Create new task to add to master list
         tasks.Add(new Task()
         {
             Name = name,
@@ -119,7 +119,6 @@ class Program
             DueDate = dueDate,
             Users = new string[realNames.Count]
         });
-        
         List<Text> userTexts = new List<Text>();
         for (int i = 0; i < realNames.Count; i++)
         {
@@ -138,10 +137,30 @@ class Program
                         new Layout("Bottom")));
 
         // Make task list UI
-        //Panel tableContainer = new Panel(new Table("TEST"));
+        var table = new Table();
+        table.Title = new TableTitle("New Task List");
+        table.Border(TableBorder.Rounded);
+        table.Width(150);
+        table.AddColumn("Task Name");
+        table.AddColumn(new TableColumn("Description").Centered());
+        table.AddColumn(new TableColumn("Users").RightAligned());
+        table.Columns[0].Width(5);
+        
+        // Add tasks to list
+        foreach (var task in tasks)
+        {
+            string workers = "";
+            foreach (var user in task.Users)
+            {
+                workers += $"{user}, ";
+            }
+            workers.Remove(workers.LastIndexOf(", "), 2);
+            table.AddRow($"[blue]{task.Name}[/]", $"[grey]{task.Description}[/]",
+                $"[green]{task.Name}[/]");
+        }
 
         // Update the left column
-        //layout["Left"].Update();
+        layout["Left"].Update(table);
 
         // Render the layout
         layout["Left"].MinimumSize(50);
@@ -179,7 +198,6 @@ class Program
     }
 }
 
-// Simple Person class to hold data
 class Task
 {
     public string Name { get; set; }
