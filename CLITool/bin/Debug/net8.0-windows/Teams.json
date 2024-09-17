@@ -1,32 +1,40 @@
 {
   "ai": [
       {
-          "alexis": "@alexis"
+          "Alexis Bliesener": "@bliesen7"
       },
       {
-          "shiva": "@shiva"
+          "Shiva Ravi": "@ravishiv"
       },
       {
-          "shean": "@shean"
+          "Sean Hughes": "@hughe3911"
       }
   ],
   "gameplay": [
       {
-          "caleb": "@caleb"
+          "Caleb Flosky": "@floskyca"
       },
       {
-          "joseph": "@joseph"
+          "Joey Pacentine": "@pacenti1"
       },
       {
-          "arsenii": "@arsenii"
+          "Arsenii Kyrychenko": "@kyrychen"
       }
   ],
   "systems": [
       {
-          "paul": "@paul"
+          "Paul Poorman": "@poormanp"
       },
       {
-          "declan": "@declan"
+          "Declan Smith": "@smithdec"
+      }
+  ],
+  "directors": [
+      {
+          "Keith Lerner": "@lernerk1"
+      },
+      {
+          "Nick Proctor": "@procto761"
       }
   ]
 }
