@@ -185,14 +185,11 @@ class Program
         var layout = new Layout("Root")
                 .SplitColumns(
                     new Layout("Main"),
-                    new Layout("Other").SplitColumns(
-                        new Layout("Description"),
-                        new Layout("Resources")
-                    )
+                    new Layout("Description")
                 );
 
         layout["Main"].Size(32);
-        layout["Other"].MinimumSize(64);
+        layout["Description"].MinimumSize(64);
 
         return layout;
     }
@@ -269,11 +266,6 @@ class Program
                     new Markup(tasks[i].Description)
                 ).Expand()
             );
-            taskUIs[i+1]["Resources"].Update(
-                new Panel(
-                    new Markup(tasks[i].Resources)
-                ).Expand()
-            );
         }
         
         // Add tasks to list
@@ -309,8 +301,6 @@ class Program
             new TextPrompt<string>("Task name"));
         var description = AnsiConsole.Prompt(
             new TextPrompt<string>("Task description"));
-        var resources = AnsiConsole.Prompt(
-            new TextPrompt<string>("Task resources"));
         var dueDate = AnsiConsole.Prompt(
             new TextPrompt<string>("Task due date"));
         
@@ -401,7 +391,6 @@ class Program
         {
             Name = name,
             Description = description,
-            Resources = resources,
             DueDate = dueDate,
             Labels = labelSymbols,
             Users = usernames
@@ -470,18 +459,17 @@ class Program
 
 class Task
 {
-    public enum TaskType { Bug, Document, Feature }
+    public enum TaskType { Bug, Document, Feature, Systems, AI, Gameplay }
     
     public string Name { get; set; }
     public string Description { get; set; }
-    public string Resources { get; set; }
     public string DueDate { get; set; }
     public List<string> Labels { get; set; }
     public List<string> Users { get; set; }
     
     public override string ToString()
     {
-        return $"{Name},\"{Description}\n**RESOURCES**:{Resources}\n \n " +
+        return $"{Name},\"{Description}\n" +
                $"/assign {String.Join(", ", Users)}\n" +
                $"/label {String.Join(", ", Labels)}\",{DueDate},";
     }

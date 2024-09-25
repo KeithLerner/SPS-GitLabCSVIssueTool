@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CLITool")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f2d548809601208ef43731e99541f6dc7f2dccd5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1d2536050a829cd6996220774493ee13556503d0")]
 [assembly: System.Reflection.AssemblyProductAttribute("CLITool")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CLITool")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
